@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- start screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="overlay" controller="mmaracic.monkeyengine.GUIAppState">
+        <layer id="layer" backgroundColor="#0000" childLayout="vertical">
+            <panel id="transparent" height="75%" width="100%"  align="center" halign="center" valign="center" childLayout="center">
+            </panel>
+            <panel id="hud_bottom" backgroundColor="#fff4" align="center" halign="center" valign="center" childLayout="vertical">
+                <control name="label" text="Alert"  id="alert" height="12%" width="100%"/>
+                <control name="label" text="Messages:"  height="12%" width="100%"/>
+                <control name="listBox" id="lstMessages" selectionMode="Disabled" height="76%" displayItems="4" width="100%" align="center"> </control>
+            </panel>
+        </layer>
+    </screen>
+</nifty>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+<!--Definitions to use controls-->
+<useStyles filename="nifty-default-styles.xml" />
+<useControls filename="nifty-default-controls.xml" />  
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- start screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+<screen id="start" controller="mmaracic.monkeyengine.GUIAppState">
+        <layer id="background" backgroundColor="#000f" childLayout="center">
+        </layer>
+        <layer id="foreground" childLayout="horizontal">
+            <panel id="left" height="100%" width="15%"  align="center" halign="center" valign="center" childLayout="center">
+            </panel>
+            <panel id="center" height="100%" width="70%" align="center" halign="center" valign="center" childLayout="vertical">
+                <panel id="txtName" height="40%" width="100%" align="center" halign="center" valign="center" childLayout="center">
+                    <text text="Pacman" font="Interface/Fonts/ComicSansMS.fnt" width="100%" height="100%" />
+                </panel>
+                 <panel id="controls" height="40%" width="100%" align="center" halign="center" valign="center" childLayout="vertical" >
+                    <panel id="panClassPath" height="20%" width="100%" align="center" halign="center" valign="center" childLayout="horizontal">
+                      <control name="label" text="classPath:" width="20%" height="100%"/>
+                      <control name="textfield" id="txtClassPath" width="60%" align="center" valign="center" ></control>
+                      <control name="button" label="Browse" id="cmdBrowsePath" width="20%" valign="center" visibleToMouse="true">
+                          <interact onClick="selectPath()"/>
+                      </control>
+                    </panel>
+                    <panel id="panPacmanAI" height="20%" width="100%" align="center" halign="center" valign="center" childLayout="horizontal">
+                      <control name="label" text="PacmanAIClass:" width="20%" height="100%" />
+                      <control name="textfield" id="txtPacmanAI" align="center" valign="center" ></control>
+                    </panel>
+                    <panel id="panGhostAI" height="20%" width="100%" align="center" halign="center" valign="center" childLayout="horizontal">
+                      <control name="label" text="GhostAIClass:" width="20%" height="100%" />
+                      <control name="textfield" id="txtGhostAI" align="center" valign="center" > </control>
+                    </panel>
+                    <panel id="panGame" height="20%" width="100%" padding="0%,30%,0%,30%" childLayout="horizontal">
+                      <control name="button" label="Start" id="cmdStart" valign="center" visibleToMouse="true">
+                          <interact onClick="startGame()"/>
+                      </control>
+                      <control name="button" label="Quit" id="cmdQuit" valign="center" visibleToMouse="true">
+                          <interact onClick="quitGame()"/>
+                      </control>
+                    </panel>
+                    <panel id="panUsername" height="20%" width="100%" align="center" halign="center" valign="center" childLayout="horizontal">
+                      <control name="label" text="Username:" width="20%" height="100%" />
+                      <control name="textfield" id="txtUsername" align="center" valign="center" > </control>
+                    </panel>
+                    <panel id="panServer" height="20%" width="100%" padding="0%,30%,0%,30%" childLayout="horizontal">
+                      <control name="button" label="Register" id="cmdRegister" width="50%" valign="center" visibleToMouse="true">
+                          <interact onClick="registerMenu()"/>
+                      </control>
+                      <control name="button" label="Submit AI" id="cmdSubmit" width="50%" valign="center" visibleToMouse="true">
+                          <interact onClick="submitAI()"/>
+                      </control>
+                    </panel>
+                 </panel>
+                 <panel id="panBottom" height="20%" width="100%" align="center" halign="center" valign="center" childLayout="center">
+                 </panel>
+            </panel>
+            <panel id="right" height="100%" width="15%" align="center" halign="center" valign="center" childLayout="center" visibleToMouse="false">
+            </panel>
+        </layer>
+    </screen>
+</nifty>

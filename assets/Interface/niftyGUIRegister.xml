@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- start screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="register" controller="mmaracic.monkeyengine.GUIAppState">
+        <layer id="background" backgroundColor="#000f" childLayout="center">
+        </layer>
+        <layer id="foreground" childLayout="horizontal">
+            <panel id="left" height="100%" width="15%"  align="center" halign="center" valign="center" childLayout="center">
+            </panel>
+            <panel id="center" height="100%" width="70%" align="center" halign="center" valign="center" childLayout="vertical">
+                <panel id="txtName" height="40%" width="100%" align="center" halign="center" valign="center" childLayout="center">
+                    <text text="Username Registration" font="Interface/Fonts/ComicSansMS.fnt" width="100%" height="100%" />
+                </panel>
+                 <panel id="panBottom" height="20%" width="100%" align="center" halign="center" valign="center" childLayout="center">
+                 </panel>
+            </panel>
+            <panel id="right" height="100%" width="15%" align="center" halign="center" valign="center" childLayout="center" visibleToMouse="false">
+            </panel>
+        </layer>
+    </screen>
+</nifty>
